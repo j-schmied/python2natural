@@ -15,7 +15,7 @@ def index():
     if request.method == "POST":
         prompt = request.form.get("prompt")
         
-        if prompt == "":
+        if prompt.strip() == "":
             return redirect(url_for("index"))
         
         loc = len([i for i in prompt if i == '\n']) + 1     # calculate Lines of Code
