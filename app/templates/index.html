@@ -13,7 +13,7 @@
     <div class="container">
         <h3>Enter Python Code below</h3>
         <form action="/" method="post">
-            <textarea name="prompt" id="prompt" placeholder="Paste code to analyze here..." class="form-control"></textarea>
+            <textarea name="prompt" id="prompt" placeholder="Paste code to analyze here..." class="form-control">{% if previous %}{{ previous }}{% endif %}</textarea>
             <input type="submit" value="Analyze" class="btn btn-dark">
         </form>
 

@@ -36,7 +36,7 @@ def index():
         answer = response["choices"][0]["text"].split("#Python 2")[0]
         print(answer)
         
-        return render_template("index.html", answer=answer)
+        return render_template("index.html", answer=answer, previous=prompt)
 
 
 if __name__ == "__main__":
