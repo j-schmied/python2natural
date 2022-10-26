@@ -1,5 +1,5 @@
 import openai
-from flask import Flask, render_template, request
+from flask import Flask, redirect, render_template, request, url_for
 from os import getenv
 
 app = Flask(__name__)
@@ -14,6 +14,9 @@ def index():
     
     if request.method == "POST":
         prompt = request.form.get("prompt")
+        
+        if prompt == "":
+            return redirect(url_for("index"))
         
         loc = len([i for i in prompt if i == '\n']) + 1     # calculate Lines of Code
         description_factor = 35     # calculated from average LoC:Result ratio
