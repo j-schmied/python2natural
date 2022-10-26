@@ -15,11 +15,16 @@ def index():
     if request.method == "POST":
         prompt = request.form.get("prompt")
         
+        loc = len([i for i in prompt if i == '\n']) + 1     # calculate Lines of Code
+        description_factor = 35     # calculated from average LoC:Result ratio
+        
+        mtr = loc * description_factor
+        
         response = openai.Completion.create(
             model="code-davinci-002",
             prompt=f"#Python 3\n{prompt}\n# Explanation of what the code does",
             temperature=0,
-            max_tokens=500,
+            max_tokens=mtr,
             top_p=1.0,
             frequency_penalty=0.0,
             presence_penalty=0.0
