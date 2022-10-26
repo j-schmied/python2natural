@@ -80,3 +80,14 @@ input {
 .footer img {
     max-height: 50px;
 }
+
+@media only screen and (orientation: portrait) {
+    
+    form {
+        width: 100vw;
+    }
+    
+    textarea {
+        width: 100%;
+    }
+}
