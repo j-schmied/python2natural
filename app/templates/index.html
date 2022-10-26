@@ -14,7 +14,7 @@
         <h3>Enter Python Code below</h3>
         <form action="/" method="post">
             <textarea name="prompt" id="prompt" placeholder="Paste code to analyze here..." class="form-control"></textarea>
-            <input type="submit" value="Analyze" class="btn btn-light">
+            <input type="submit" value="Analyze" class="btn btn-dark">
         </form>
 
         {% if answer %}
@@ -24,6 +24,10 @@
         </div>
         {% endif %}
     </div>
+
+    <footer class="footer">
+        <p>Powered by<a href="https://openai.com/"><img src="https://youthpress.net/xe/files/attach/images/9770/916/593/10f2349a43538ac622a667110b3f93e9.png" alt="OpenAI Logo"></a></p>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </body>
 </html>
