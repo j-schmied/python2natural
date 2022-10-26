@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 25px;
+    width: 50vw;
+    align-items: center;
+}
+
+textarea {
+    width: 50% !important;
+    height: 30vh;
+    margin: 25px !important;
+    background: url(http://i.imgur.com/2cOaJ.png);
+    background-attachment: local;
+    background-repeat: no-repeat;
+    padding-left: 35px !important;
+    padding-top: 12px !important;
+    border-color:#ccc;
+    font-size: 14px !important;
+    line-height: 1.14 !important;
+}
+
+input {
+    width: 50%;
+    margin: 25px;
+    padding: 5px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 25px;
+}
+
+.answer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    margin: 25px;
+    width: 50vw;
+}
